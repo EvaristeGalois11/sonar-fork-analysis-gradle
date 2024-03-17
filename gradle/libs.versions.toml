@@ -1,0 +1,5 @@
+[versions]
+junit = "5.10.2"
+
+[libraries]
+spotless = "com.diffplug.spotless:spotless-plugin-gradle:6.25.0"

@@ -22,7 +22,7 @@ tasks.jacocoTestReport {
 testing {
     suites {
         val test by getting(JvmTestSuite::class) {
-            useJUnitJupiter("5.10.2")
+            useJUnitJupiter(versionCatalogs.named("libs").findVersion("junit").get().requiredVersion)
         }
     }
 }
