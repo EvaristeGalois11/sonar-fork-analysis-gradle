@@ -1,0 +1,22 @@
+name: 'Sonar'
+on:
+  workflow_run:
+    workflows: [ Build ]
+    types:
+      - completed
+jobs:
+  sonar:
+    name: 'Sonar analysis'
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    permissions:
+      actions: read
+    steps:
+      - name: 'Execute Sonar analysis'
+        uses: evaristegalois11/sonar-fork-analysis@master
+        with:
+          distribution: temurin
+          java-version: 21
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          sonar-token: ${{ secrets.SONAR_TOKEN }}
+          project-key: EvaristeGalois11_sonar-fork-analysis-gradle
