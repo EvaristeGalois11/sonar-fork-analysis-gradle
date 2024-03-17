@@ -1,5 +1,6 @@
 plugins {
     java
+    id("com.diffplug.spotless")
 }
 
 group = "org.example.sonar-fork-analysis"
@@ -20,4 +21,13 @@ tasks.compileJava {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+        importOrder()
+        removeUnusedImports()
+        formatAnnotations()
+    }
 }
