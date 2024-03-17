@@ -1,6 +1,7 @@
 plugins {
     java
-    id("com.diffplug.spotless")
+    jacoco
+    com.diffplug.spotless
 }
 
 group = "org.example.sonar-fork-analysis"
@@ -12,6 +13,10 @@ repositories {
 
 tasks.compileJava {
     options.release = 21
+}
+
+tasks.jacocoTestReport {
+    enabled = false
 }
 
 testing {

@@ -1,3 +1,3 @@
 plugins {
-    id("default-convention")
+    `default-convention`
 }

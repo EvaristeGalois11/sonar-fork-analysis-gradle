@@ -1,5 +1,5 @@
 plugins {
-    id("default-convention")
+    `default-convention`
 }
 
 dependencies {
