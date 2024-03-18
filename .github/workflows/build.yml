@@ -21,7 +21,7 @@ jobs:
           cache: gradle
 
       - name: 'Build and test'
-        run: ./gradle check
+        run: ./gradlew check
 
       - name: 'Prepare Sonar analysis'
         uses: evaristegalois11/sonar-fork-analysis@master
