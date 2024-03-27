@@ -5,4 +5,4 @@ junit = "5.10.2"
 spotless = "com.diffplug.spotless:spotless-plugin-gradle:6.25.0"
 
 [plugins]
-sonar = "org.sonarqube:4.4.1.3373"
+sonar = "org.sonarqube:5.0.0.4638"
